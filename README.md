@@ -21,7 +21,7 @@ A estrutura de pastas é a padrão do fluig então se copiar e colar os arquivos
   
 - Após a primeira etapa o cadastro de filial está concluído.
   
--Abra o processo "Feedback Almoxarifado" e preencha os campos obrigatóriso sinalizados através do *(asterísco) a frente de cada campo (label), foram utilizados métodos de obrigatoriedade de preenchimento de todos os campos, consumo do dataset do "ds_preCadastro_filial" criado através da finalização do processo da etapa 1 para seleção dos campos de Unidade Origem e Unidade Destino, foi criado um campo de prazo atendendo as regras citadas nas premissas como exigências.
+- Abra o processo "Feedback Almoxarifado" e preencha os campos obrigatóriso sinalizados através do *(asterísco) a frente de cada campo (label), foram utilizados métodos de obrigatoriedade de preenchimento de todos os campos, consumo do dataset do "ds_preCadastro_filial" criado através da finalização do processo da etapa 1 para seleção dos campos de Unidade Origem e Unidade Destino, foi criado um campo de prazo atendendo as regras citadas nas premissas como exigências.
 
 - Após a etapa terceira nota-se que aatividade foi encaminhada para o usuário responsável almoxarifado, atendendo assim mais uma exigência descrita nas premissas, tomei a liberdade de criar um botão (switch) para sinalizar o recebimento e tornei-o obrigatório (mesmo não tendo sido exigído).
 
