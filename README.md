@@ -17,7 +17,8 @@ O projeto criado deverá ser publicado em um repositório, como drive ou git. Al
 
 A estrutura de pastas é a padrão do fluig então se copiar e colar os arquivos já é possível subir o projeto em um servidor.
 
-- Abra o processo "Pré Cadastro Filial" e preencha os campos obrigatóriso sinalizados através do *(asterísco) a frente de cada campo (label), foram utilizados métodos de consulta pública no serviço de CEP ViaCep através da inserção do CEP, obrigatoriedade de preenchimento de todos os campos, consumo do dataset do Colleague para seleção do responsável almoxarifado como também foi requerido nas premissas, tomei a liberdade de utilizar uma máscara no campo de CEP para deixar visualmente mais agradável;
+- Abra o processo "Pré Cadastro Filial" e preencha os campos obrigatóriso sinalizados através do *(asterísco) a frente de cada campo (label), foram utilizados métodos de consulta pública no serviço de CEP ViaCep através da inserção do CEP, obrigatoriedade de preenchimento de todos os campos, consumo do dataset do Colleague para seleção do responsável almoxarifado como também foi requerido nas premissas, tomei a liberdade de utilizar uma máscara no campo de CEP para deixar visualmente mais agradável.
+  
 - Após a primeira etapa o cadastro de filial está concluído.
   
 -Abra o processo "Feedback Almoxarifado" e preencha os campos obrigatóriso sinalizados através do *(asterísco) a frente de cada campo (label), foram utilizados métodos de obrigatoriedade de preenchimento de todos os campos, consumo do dataset do "ds_preCadastro_filial" criado através da finalização do processo da etapa 1 para seleção dos campos de Unidade Origem e Unidade Destino, foi criado um campo de prazo atendendo as regras citadas nas premissas como exigências.
