@@ -1,0 +1,120 @@
+<html>
+
+<head>
+	<link type="text/css" rel="stylesheet" href="/style-guide/css/fluig-style-guide.min.css" />
+	<script type="text/javascript" src="/portal/resources/js/jquery/jquery.js"></script>
+	<script type="text/javascript" src="/portal/resources/js/jquery/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="/portal/resources/js/mustache/mustache-min.js"></script>
+	<script type="text/javascript" src="/style-guide/js/fluig-style-guide.min.js" charset="utf-8"></script>
+	<script type="text/javascript" src="/webdesk/vcXMLRPC.js"></script>
+	<script src="jquery.mask.js"></script>
+	<script src="formValidate.js"></script>
+	<script src="./main.js"></script>
+</head>
+
+<body>
+	<div class="fluig-style-guide">
+		<form name="form" role="form">
+			<div class='panel panel-primary'>
+				<div class='panel-heading'>
+					<h3 class='panel-title'><i class="flaticon flaticon-documents icon-sm" aria-hidden="true"></i> Cadastro Filial</h3>
+				</div>
+				<div class='panel-body'>
+					<div class="row">
+
+						<div class='form-field col-md-2'>
+							<div class='form-group'>
+								<label class="control-label" for='codigo'>Código*</label>
+								<input type='text' class='form-control' id='codigo' name='codigo' required="required">
+							</div>
+						</div>
+						<div class='form-field col-md-3'>
+							<div class='form-group'>
+								<label class="control-label" for='nome'>Nome*</label>
+								<input type='text' class='form-control' id='nome' name='nome' required="required">
+							</div>
+						</div>
+						<div class='form-field col-md-3'>
+							<div class='form-group'>
+								<label class="control-label" for='respAlmox'>Responsável Almoxarifado*</label>
+								<input
+									required="required"
+									type='zoom'
+									id = 'respAlmox'
+									name='respAlmox'
+									data-zoom="{
+										'displayKey':'colleagueName',
+										'datasetId':'colleague',
+										'maximumSelectionLength':'1',
+										'placeholder':'Escolha o responsável',
+										'fields':[
+											{
+												'field':'colleagueId',
+												'label':'ID'
+												},{
+												'field':'colleagueName',
+												'label':'Nome',
+												'standard':'true'
+												},{
+												'field':'login',
+												'label':'Login'
+											}
+										]
+									}"
+								/>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class='form-field col-md-3'>
+							<div class='form-group'>
+								<label class="control-label" for='cep'>CEP*</label>
+								<input type='text' class='form-control' id='cep' name='cep' required="required">
+							</div>
+						</div>
+					</div>	
+					<div class="row">	
+						<div class='col-md-3'>
+							<div class='form-group'>
+								<label for='rua'>Rua</label>
+								<input type='text' class='form-control' id='rua' name='rua' readonly>
+							</div>
+						</div>
+						<div class='col-md-1'>
+							<div class='form-field form-group'>
+								<label class="control-label" for='numero'>Número*</label>
+								<input type='text' class='form-control' id='numero' name='numero' required="required">
+							</div>
+						</div>
+						<div class='col-md-2'>
+							<div class='form-group'>
+								<label for='complemento'>Complemento</label>
+								<input type='text' class='form-control' id='complemento' name='complemento' readonly>
+							</div>
+						</div>
+						<div class='col-md-2'>
+							<div class='form-group'>
+								<label for='bairro'>Bairro</label>
+								<input type='text' class='form-control' id='bairro' name='bairro' readonly>
+							</div>
+						</div>
+						<div class='col-md-3'>
+							<div class='form-group'>
+								<label for='cidade'>Cidade</label>
+								<input type='text' class='form-control' id='cidade' name='cidade' readonly>
+							</div>
+						</div>
+						<div class='col-md-1'>
+							<div class='form-group'>
+								<label for='uf'>UF</label>
+								<input type='text' class='form-control' id='uf' name='uf' readonly>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+</body>
+
+</html>

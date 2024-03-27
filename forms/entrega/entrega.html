@@ -1,0 +1,269 @@
+<html>
+
+<head>
+	<link type="text/css" rel="stylesheet" href="/style-guide/css/fluig-style-guide.min.css" />
+	<script type="text/javascript" src="/portal/resources/js/jquery/jquery.js"></script>
+	<script type="text/javascript" src="/portal/resources/js/jquery/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="/portal/resources/js/mustache/mustache-min.js"></script>
+	<script type="text/javascript" src="/style-guide/js/fluig-style-guide.min.js" charset="utf-8"></script>
+	<script type="text/javascript" src="/webdesk/vcXMLRPC.js"></script>
+	<script src="jquery.mask.js"></script>
+	<script src="formValidate.js"></script>
+	<script src="./main.js"></script>
+</head>
+
+<body>
+	<div class="fluig-style-guide">
+		<form name="form" role="form">
+			<!-- Campos Hidden -->
+				<input type="hidden" name="respAlmoxDest" id="respAlmoxDest">
+			<!-- Final Campos Hidden -->
+			<div class='panel panel-primary' id="primeiroPanel" name="primeiroPanel">
+				<div class='panel-heading'>
+					<h3 class='panel-title'><i class="flaticon flaticon-documents icon-sm" aria-hidden="true"></i> Origem</h3>
+				</div>
+				<div class='panel-body'>
+					<div class="row">
+						<div class='form-field col-md-3'>
+							<div class='form-group'>
+								<label class="control-label" for='unidadeOrigem'>Unidade origem*</label>
+								<input
+									required="required"
+									type='zoom'
+									id = 'unidadeOrigem'
+									name='unidadeOrigem'
+									data-zoom="{
+										'displayKey':'nome',
+										'datasetId':'ds_preCadastro_filial',
+										'maximumSelectionLength':'1',
+										'placeholder':'Escolha a Unidade',
+										'fields':[
+											{
+												'field':'codigo',
+												'label':'Código'
+												},{
+												'field':'nome',
+												'label':'Nome',
+												'standard':'true'
+												},{
+												'field':'respAlmox',
+												'label':'Responsável',
+												'visible':'false'
+												},{
+												'field':'cep',
+												'label':'CEP',
+												'visible':'false'
+												},{
+												'field':'numero',
+												'label':'Número',
+												'visible':'false'
+												},{
+												'field':'complemento',
+												'label':'Complemento',
+												'visible':'false'
+												},{
+												'field':'bairro',
+												'label':'Bairro',
+												'visible':'false'
+												},{
+												'field':'cidade',
+												'label':'Cidade',
+												'visible':'false'
+												},{
+												'field':'uf',
+												'label':'UF',
+												'visible':'false'
+												},{
+												'field':'rua',
+												'label':'Rua',
+												'visible':'false'
+												
+											}
+										]
+									}"
+								/>
+							</div>
+						</div>
+					</div>
+					<div class="row">	
+						<div class='col-md-3'>
+							<div class='form-group'>
+								<label for='rua'>Rua</label>
+								<input type='text' class='form-control' id='rua' name='rua' readonly>
+							</div>
+						</div>
+						<div class='col-md-1'>
+							<div class='form-group'>
+								<label class="control-label" for='numero'>Número</label>
+								<input type='text' class='form-control' id='numero' name='numero' readonly>
+							</div>
+						</div>
+						<div class='col-md-2'>
+							<div class='form-group'>
+								<label for='complemento'>Complemento</label>
+								<input type='text' class='form-control' id='complemento' name='complemento' readonly>
+							</div>
+						</div>
+						<div class='col-md-2'>
+							<div class='form-group'>
+								<label for='bairro'>Bairro</label>
+								<input type='text' class='form-control' id='bairro' name='bairro' readonly>
+							</div>
+						</div>
+						<div class='col-md-3'>
+							<div class='form-group'>
+								<label for='cidade'>Cidade</label>
+								<input type='text' class='form-control' id='cidade' name='cidade' readonly>
+							</div>
+						</div>
+						<div class='col-md-1'>
+							<div class='form-group'>
+								<label for='uf'>UF</label>
+								<input type='text' class='form-control' id='uf' name='uf' readonly>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class='form-field col-md-2'>
+							<div class='form-group'>
+								<label for='prazoEntrega'>Prazo de entrega*</label>
+								<input type='text' class='form-control' id='prazoEntrega' name='prazoEntrega' readonly>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class='form-field col-md-12'>
+							<div class='form-group'>
+								<label for='descMercadoria'>Descritivo da mercadoria*</label>
+								<textarea class='form-control' rows='3' id='descMercadoria' name='descMercadoria'></textarea>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class='panel panel-primary' id="segundoPanel" name="segundoPanel">
+				<div class='panel-heading'>
+					<h3 class='panel-title'><i class="flaticon flaticon-documents icon-sm" aria-hidden="true"></i> Destino</h3>
+				</div>
+				<div class='panel-body'>
+					<div class="row">
+						<div class='form-field col-md-3'>
+							<div class='form-group'>
+								<label class="control-label" for='unidadeDestino'>Unidade destino*</label>
+								<input
+									required="required"
+									type='zoom'
+									id = 'unidadeDestino'
+									name='unidadeDestino'
+									data-zoom="{
+										'displayKey':'nome',
+										'datasetId':'ds_preCadastro_filial',
+										'maximumSelectionLength':'1',
+										'placeholder':'Escolha a Unidade',
+										'fields':[
+											{
+												'field':'codigo',
+												'label':'Código'
+												},{
+												'field':'nome',
+												'label':'Nome',
+												'standard':'true'
+												},{
+												'field':'respAlmox',
+												'label':'Responsável',
+												'visible':'false'
+												},{
+												'field':'cep',
+												'label':'CEP',
+												'visible':'false'
+												},{
+												'field':'numero',
+												'label':'Número',
+												'visible':'false'
+												},{
+												'field':'complemento',
+												'label':'Complemento',
+												'visible':'false'
+												},{
+												'field':'bairro',
+												'label':'Bairro',
+												'visible':'false'
+												},{
+												'field':'cidade',
+												'label':'Cidade',
+												'visible':'false'
+												},{
+												'field':'uf',
+												'label':'UF',
+												'visible':'false'
+												},{
+												'field':'rua',
+												'label':'Rua',
+												'visible':'false'
+												
+											}
+										]
+									}"
+								/>
+							</div>
+						</div>
+						<div class='col-md-3'>
+							<div class='form-group'>
+								<label for='respAlmox'>Responsável Almoxarifado</label>
+								<input type='text' class='form-control' id='respAlmox' name='respAlmox' readonly>
+							</div>
+						</div>
+					</div>
+					<div class="row">	
+						<div class='col-md-3'>
+							<div class='form-group'>
+								<label for='ruaDest'>Rua</label>
+								<input type='text' class='form-control' id='ruaDest' name='ruaDest' readonly>
+							</div>
+						</div>
+						<div class='col-md-1'>
+							<div class='form-group'>
+								<label class="control-label" for='numeroDest'>Número</label>
+								<input type='text' class='form-control' id='numeroDest' name='numeroDest' readonly>
+							</div>
+						</div>
+						<div class='col-md-2'>
+							<div class='form-group'>
+								<label for='complementoDest'>Complemento</label>
+								<input type='text' class='form-control' id='complementoDest' name='complementoDest' readonly>
+							</div>
+						</div>
+						<div class='col-md-2'>
+							<div class='form-group'>
+								<label for='bairroDest'>Bairro</label>
+								<input type='text' class='form-control' id='bairroDest' name='bairroDest' readonly>
+							</div>
+						</div>
+						<div class='col-md-3'>
+							<div class='form-group'>
+								<label for='cidadeDest'>Cidade</label>
+								<input type='text' class='form-control' id='cidadeDest' name='cidadeDest' readonly>
+							</div>
+						</div>
+						<div class='col-md-1'>
+							<div class='form-group'>
+								<label for='ufDest'>UF</label>
+								<input type='text' class='form-control' id='ufDest' name='ufDest' readonly>
+							</div>
+						</div>
+					</div>
+					<div class="row" id="recebeMerc" name="recebeMerc">
+						<div class="form-field col-md-3">
+							<div class='form-group'>
+								<label for="recebimento">Recebido?*</label>
+								<input id="recebimento" name="recebimento" type="checkbox" data-on-color="success" data-size="mini">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>	
+		</form>
+	</div>
+</body>
+
+</html>
